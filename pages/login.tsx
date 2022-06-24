@@ -1,17 +1,18 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { LogoHeader } from "../components/organisms/Header";
 
-const Home: NextPage = () => {
+const Login: NextPage = () => {
   return (
     <>
       <Head>
         <title>Pets | Login</title>
       </Head>
       <main>
-        <h1>Login Page</h1>
+        <LogoHeader />
       </main>
     </>
   );
 };
 
-export default Home;
+export default Login;

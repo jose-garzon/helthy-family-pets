@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const Home: NextPage = () => {
+const Register: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,4 +14,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Register;
