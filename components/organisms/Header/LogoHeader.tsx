@@ -1,11 +1,13 @@
+import { Container, Row } from "@nextui-org/react";
 import { Logo } from "../../Atoms/Logo";
-import { Toolbar } from "../../Atoms/Toolbar";
 
 const LogoHeader = () => {
   return (
-    <Toolbar>
-      <Logo />
-    </Toolbar>
+    <Container as="header" css={{ py: "$6" }}>
+      <Row justify="center">
+        <Logo />
+      </Row>
+    </Container>
   );
 };
 
