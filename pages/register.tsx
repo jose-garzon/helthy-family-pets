@@ -5,10 +5,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Pets</title>
+        <title>Pets | Register</title>
       </Head>
       <main>
-        <h1>Home Page</h1>
+        <h1>Register Page</h1>
       </main>
     </>
   );
