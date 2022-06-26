@@ -1,5 +1,4 @@
 import {
-  Button,
   Col,
   Container,
   Input,
@@ -10,15 +9,14 @@ import {
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { TbBrandGoogle } from "react-icons/tb";
-import { LoadingButton } from "../components/Atoms/Button";
+import { GoogleButton, LoadingButton } from "../components/Atoms/Button";
 import { LogoHeader } from "../components/organisms/Header";
 
 const Register: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Pets | Registro</title>
+        <title>Healthy Family | Registro</title>
       </Head>
       <LogoHeader />
       <Container
@@ -64,15 +62,9 @@ const Register: NextPage = () => {
           </LoadingButton>
         </form>
         <Col css={{ textAlign: "center" }}>
-          <Button
-            light
-            auto
-            color="error"
-            css={{ width: "100%" }}
-            icon={<TbBrandGoogle size="20" />}
-          >
+          <GoogleButton light auto css={{ width: "100%" }}>
             Entrar con Google
-          </Button>
+          </GoogleButton>
           <Link href="/login">
             <StyledLink underline color="text">
               Ya tengo una cuenta
