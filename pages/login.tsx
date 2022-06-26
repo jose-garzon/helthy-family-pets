@@ -3,9 +3,9 @@ import {
   Col,
   Container,
   Input,
-  Link as StyledLink,
   Spacer,
   Text,
+  Link as StyledLink,
 } from "@nextui-org/react";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -29,7 +29,6 @@ const Login: NextPage = () => {
         }}
       >
         <form>
-          <Spacer />
           <Text h1>Login</Text>
           <Spacer />
           <Input
@@ -43,7 +42,7 @@ const Login: NextPage = () => {
             fullWidth
             id="login_password"
             label="Contraseña"
-            placeholder="Escribe tu correo contraseña"
+            placeholder="Escribe tu contraseña"
           />
           <Spacer y={2} />
           <LoadingButton loading={false} rounded css={{ width: "100%" }}>
