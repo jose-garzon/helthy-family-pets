@@ -4,6 +4,7 @@ import { QueryClientProvider } from "react-query";
 import { queryClient } from "../services/queryClient";
 import { SessionProvider } from "next-auth/react";
 import { AuthProtectedPage } from "../components/molecules/AuthComponents";
+import "../styles/global.css";
 
 type ComponentProps = { auth: boolean };
 interface CustomAppProps extends Omit<AppProps, "Component"> {
