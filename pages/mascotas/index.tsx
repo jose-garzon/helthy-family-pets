@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import { TbPlus } from "react-icons/tb";
-import { PetCard } from "../../components/organisms/Card";
+import { PetAvatar } from "../../components/molecules/Avatar";
 import { SignedHeader } from "../../components/organisms/Header";
 
 const PetsList = () => {
@@ -29,10 +29,10 @@ const PetsList = () => {
         <Text size="14px">Agrega a las mascotas de tu familia</Text>
         <Grid.Container gap={2} css={{ p: "0" }}>
           <Grid>
-            <PetCard name="Drago" />
+            <PetAvatar name="Drago" />
           </Grid>
           <Grid>
-            <PetCard name="Roccu" status="sick" />
+            <PetAvatar name="Roccu" status="sick" />
           </Grid>
         </Grid.Container>
 

@@ -3,9 +3,10 @@ import { LogoHeader } from "../../components/organisms/Header";
 
 const CreatePet = () => {
   return (
-    <Container>
+    <>
       <LogoHeader />
-    </Container>
+      <Container></Container>
+    </>
   );
 };
 

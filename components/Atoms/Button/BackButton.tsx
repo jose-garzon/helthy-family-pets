@@ -8,7 +8,7 @@ const BackButton = () => {
   return (
     <Button
       onPress={goBack}
-      light
+      bordered
       color="primary"
       auto
       css={{ px: 0, aspectRatio: 1 }}
