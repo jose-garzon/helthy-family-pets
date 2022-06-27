@@ -5,10 +5,12 @@ import { Logo } from "../../Atoms/Logo";
 const Header = () => {
   return (
     <Container as="header" css={{ py: "$6" }}>
-      <Row justify="space-between">
+      <Row justify="space-between" align="center">
         <Logo />
         <Link href="/login">
-          <Text>Iniciar Sesión</Text>
+          <Text weight="bold" color="primary">
+            Iniciar Sesión
+          </Text>
         </Link>
       </Row>
     </Container>

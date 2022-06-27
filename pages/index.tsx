@@ -4,6 +4,7 @@ import {
   Col,
   Container,
   Input,
+  Row,
   Spacer,
   Text,
 } from "@nextui-org/react";
@@ -11,10 +12,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/organisms/Header";
 import { MdOutlinePets } from "react-icons/md";
-import { GoogleButton } from "../components/Atoms/Button";
+import { GoogleButton, LoadingButton } from "../components/Atoms/Button";
 import Link from "next/link";
 import { ServicesCard } from "../components/organisms/Card";
-import { TbBug, TbMedicineSyrup, TbVaccine } from "react-icons/tb";
+import { TbBug, TbMail, TbVaccine } from "react-icons/tb";
+import { FaPills } from "react-icons/fa";
 import { AiOutlineMedicineBox } from "react-icons/ai";
 
 const Home: NextPage = () => {
@@ -24,7 +26,7 @@ const Home: NextPage = () => {
         <title>Healthy Family</title>
       </Head>
       <Header />
-      <Container>
+      <Container css={{ pb: "$10" }}>
         <Col css={{ my: "$5" }} as="main">
           <Text h2 css={{ lineHeight: "$xs" }}>
             Cuida a tu familiar <br /> de cuatro patas
@@ -33,27 +35,67 @@ const Home: NextPage = () => {
             Lleva el registro y haz seguimiento de la salud de tus mascotas
           </Text>
 
-          <Col css={{ my: "$10", px: "$20" }} as="section">
-            <Col>
-              <Link href="#first_pet">
-                <Button rounded>Crea tu primer mascota</Button>
-              </Link>
-              <Spacer />
-              <Button rounded bordered>
+          <Col css={{ my: "$10", px: "$15" }} as="section">
+            <Link href="#first_pet">
+              <Button rounded css={{ width: "100%", mb: "$10" }}>
+                Crea tu primer mascota
+              </Button>
+            </Link>
+            <Link href="/registro">
+              <Button
+                size="sm"
+                rounded
+                bordered
+                css={{ width: "100%", mb: "$5" }}
+                icon={<TbMail size={20} />}
+              >
                 Registrate
               </Button>
-              <Spacer />
-              <GoogleButton light>Entrar con Google</GoogleButton>
-            </Col>
+            </Link>
+            <GoogleButton size="sm" bordered css={{ width: "100%" }}>
+              Entrar con Google
+            </GoogleButton>
           </Col>
         </Col>
 
-        <Text h3>Programa y gestiona sus: </Text>
-        <ServicesCard message="Vacunas" icon={TbVaccine} />
-        <ServicesCard message="Ciclos de desparacitación" icon={TbBug} />
-        <ServicesCard message="Citas médicas" icon={AiOutlineMedicineBox} />
-        <ServicesCard message="Medicinas" icon={TbMedicineSyrup} />
-        <ServicesCard message="Ciclo Menstrual" icon={TbVaccine} />
+        <Col
+          as="section"
+          css={{
+            gap: "$10",
+            display: "flex",
+            flexDirection: "column",
+            mb: "$10",
+          }}
+        >
+          <Text h3 css={{ m: "0" }}>
+            Programa y gestiona sus:
+          </Text>
+          <ServicesCard
+            message="Vacunas"
+            icon={TbVaccine}
+            description="Puedes programar las fechas de las vacunas de tu mascota"
+          />
+          <ServicesCard
+            message="Ciclos de desparacitación"
+            icon={TbBug}
+            description="Recuerda proteger a tu mascota de parasitos"
+          />
+          <ServicesCard
+            message="Citas médicas"
+            icon={AiOutlineMedicineBox}
+            description="Lleva el historial de las visitas al veterinario"
+          />
+          <ServicesCard
+            message="Medicinas"
+            icon={FaPills}
+            description="Recuerda que medicinas esta tomando tu mascota"
+          />
+          <ServicesCard
+            message="Ciclo Menstrual"
+            icon={TbVaccine}
+            description="Registra los días de la menstruación de tu mascota"
+          />
+        </Col>
 
         <Card id="first_pet" as="section" variant="bordered">
           <Card.Header>
@@ -77,9 +119,9 @@ const Home: NextPage = () => {
             />
           </Card.Body>
           <Card.Footer>
-            <Button css={{ width: "100%" }} rounded>
+            <LoadingButton loading={false} css={{ width: "100%" }} rounded>
               Crear
-            </Button>
+            </LoadingButton>
           </Card.Footer>
         </Card>
       </Container>
