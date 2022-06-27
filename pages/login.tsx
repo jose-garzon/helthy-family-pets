@@ -23,7 +23,7 @@ const Login: NextPage = () => {
         css={{
           display: "grid",
           gridTemplateRows: "1fr auto",
-          height: "calc(100vh - 50px)",
+          height: "calc(100vh - 65px)",
         }}
       >
         <form>
