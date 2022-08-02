@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { TbPlus } from "react-icons/tb";
 import { PetAvatar } from "../../components/molecules/Avatar";
+import { EventCard } from "../../components/organisms/Card";
 import { SignedHeader } from "../../components/organisms/Header";
 
 const PetsList = () => {
@@ -46,6 +47,8 @@ const PetsList = () => {
           <Text h2 size="20px" css={{ mt: "$15" }}>
             Recordatorios
           </Text>
+          <EventCard />
+          <EventCard />
         </Col>
       </Container>
     </>
