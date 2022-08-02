@@ -1,11 +1,9 @@
-import { Button, Card, Col, Container, Input, Text } from "@nextui-org/react";
+import { Button, Col, Container, Text } from "@nextui-org/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/organisms/Header";
-import { MdOutlinePets } from "react-icons/md";
-import { GoogleButton, LoadingButton } from "../components/Atoms/Button";
+import { GoogleButton } from "../components/Atoms/Button";
 import Link from "next/link";
-import { ServicesCard } from "../components/organisms/Card";
 import { TbMail } from "react-icons/tb";
 
 const Home: NextPage = () => {
